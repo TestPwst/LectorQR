@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "130162744338",
+    "project_id": "paselista-3bf9e",
+    "storage_bucket": "paselista-3bf9e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130162744338:android:6b684d3ad86e6a1be14ccb",
+        "android_client_info": {
+          "package_name": "com.example.lectorqr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf7aHCezn_J2n3rvaSwMtIAFDUc8XchGw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
