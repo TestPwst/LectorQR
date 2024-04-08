@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
      TextView TXV,TXV2,TXV3,TXV4,TXV5,TXV6,TXV7;
      AutoCompleteTextView List,DayList;
      ArrayAdapter <String> adapterItemsDay,adapterItems;
-     String n_,t_,tt_,Dia,act;
+     String n_,t_,Dia,act;
     public String CURP="";
 
     @Override
@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btnscan = findViewById(R.id.btn_scan);
         txtresultado = findViewById(R.id.txt_resultado);
+        txtresultado.setEnabled(false);
         TXV = (TextView) findViewById(R.id.TV);
         TXV2 = (TextView) findViewById(R.id.TV2);
         TXV3 = (TextView) findViewById(R.id.TV3);
@@ -90,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         btnscan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                txtresultado.setEnabled(true);
                 IntentIntegrator intengrador = new IntentIntegrator(MainActivity.this);
                 intengrador.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE);
                 intengrador.setPrompt("Lector - QR");
@@ -105,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if(result != null){
             if(result.getContents() == null){
+                txtresultado.setEnabled(false);
                 Toast.makeText(this, "Lectura cancelada", Toast.LENGTH_LONG).show();
             }
             else{
@@ -120,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
                     send_email(n_,t_,AppData.Nombre,AppData.A_P,AppData.A_M,AppData.Num,AppData.Area,AppData.Correo,AppData.Cel,act);
                     saveData(AppData.Nombre,AppData.A_P,AppData.A_M,AppData.Num,AppData.Area,AppData.Correo,AppData.Cel,act);
                     txtresultado.setText("");
+                    txtresultado.setEnabled(false);
                 } catch (AddressException e) {
                     throw new RuntimeException(e);
                 }

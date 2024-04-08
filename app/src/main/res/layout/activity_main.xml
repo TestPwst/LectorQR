@@ -55,42 +55,43 @@
             android:id="@+id/TV"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="TextView" />
+            android:hint="Nombre"/>
+
 
         <TextView
             android:id="@+id/TV2"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="TextView" />
+            android:hint="Apellido Paterno" />
 
         <TextView
             android:id="@+id/TV3"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="TextView" />
+            android:hint="Apellido Materno" />
 
         <TextView
             android:id="@+id/TV4"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="TextView" />
+            android:hint="Número de Empleado" />
         <TextView
             android:id="@+id/TV5"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="TextView" />
+            android:hint="Area" />
 
         <TextView
             android:id="@+id/TV6"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="TextView" />
+            android:hint="Correo Electronico" />
 
         <TextView
             android:id="@+id/TV7"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="TextView" />
+            android:hint="Telefono celular" />
 
         <Button
             android:id="@+id/btn_scan"
